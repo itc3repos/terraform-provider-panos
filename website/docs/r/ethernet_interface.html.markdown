@@ -14,7 +14,7 @@ This resource allows you to add/update/delete ethernet interfaces.
 
 ```hcl
 # Configure a bare-bones ethernet interface.
-resource "panos_ethernet_interface" "eth3" {
+resource "panos_ethernet_interface" "example1" {
     name = "ethernet1/3"
     mode = "layer3"
     static_ips = ["10.1.1.1/24"]
@@ -22,7 +22,7 @@ resource "panos_ethernet_interface" "eth3" {
 }
 
 # Configure a DHCP ethernet interface for vsys1 to use.
-resource "panos_ethernet_interface" "eth4" {
+resource "panos_ethernet_interface" "example2" {
     name = "ethernet1/4"
     vsys = "vsys1"
     mode = "layer3"
